@@ -23,12 +23,15 @@
     synchronize:
       src: "{{ item.src }}"
       dest: "{{ item.dest }}"
+      recursive: "{{ item.recursive }}"
     loop:
     - src: /home/saksham/class/Apollo-master/
       dest: /usr/share/nginx/html
+      recursive: yes
 
     - src: /home/saksham/class/site1
       dest: /etc/nginx/sites-available
+      recursive: yes
     notify:
     - Restart nginx
     tags:
