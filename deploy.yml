@@ -16,7 +16,7 @@
 
   - name: Create project directory
     file:
-      path: /var/www/site2
+      path: /usr/share/nginx/html/site1
       state: directory
 
   - name: Copy files
