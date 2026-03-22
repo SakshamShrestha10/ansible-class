@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become_user: root
+
+  tasks:
+  - name: Copy files
+    copy:
+      src: /home/saksham/ansible
+      dest: /
+      owner: saksham
+      group: saksham
+
+  - name: Archive file
+    archive:
+      path: /ansible
+      dest: /ansible.tar
