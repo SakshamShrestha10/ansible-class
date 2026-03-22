@@ -26,7 +26,7 @@
       recursive: "{{ item.recursive }}"
     loop:
     - src: /home/saksham/class/Apollo-master/
-      dest: /var/www/site1/
+      dest: /usr/share/nginx/html
       recursive: yes
 
     - src: /home/saksham/class/site1
